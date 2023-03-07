@@ -5,7 +5,7 @@ import SideBar from "../assets/Components/SideBar";
 
 const Dashboard = () => {
   return (
-    <>
+    <div className="bg-[#fbfbfb]">
       <div>
         <DashboardHeader />
       </div>
@@ -13,7 +13,7 @@ const Dashboard = () => {
         <SideBar />
         <DashboardContent />
       </div>
-    </>
+    </div>
   );
 };
 
