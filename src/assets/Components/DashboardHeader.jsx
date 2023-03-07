@@ -4,7 +4,6 @@ import bell from "../../assets/images/ppo.png";
 import profile from "../../assets/images/ppp.png";
 import s1 from "../../assets/images/s1.png";
 import d1 from "../../assets/images/d1.png";
-import SideBar from "./SideBar";
 
 const DashboardHeader = () => {
   return (
@@ -39,7 +38,6 @@ const DashboardHeader = () => {
           </div>
         </div>
       </div>
-      <SideBar />
     </>
   );
 };

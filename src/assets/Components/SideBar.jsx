@@ -11,6 +11,7 @@ import users from "../../assets/images/user-friends 1.png";
 import arrowDown from "../../assets/images/v11.png";
 import bank from "../../assets/images/bank.png";
 import coins from "../../assets/images/coins.png";
+import loanp from "../../assets/images/loanp.png";
 
 import { NavLink, Router } from "react-router-dom";
 
@@ -73,7 +74,7 @@ const SideBar = () => {
 
         <div to="/admin/home" activeClassName="active" className="py-3">
           <div className="flex flex-row items-center justify-start pl-8 space-x-2">
-            <img src={briefcase} alt="icon" />
+            <img src={loanp} alt="icon" />
             <p>Loan Requests</p>
           </div>
         </div>
@@ -104,7 +105,7 @@ const SideBar = () => {
         </div>
         <div to="/admin/home" activeClassName="active" className="py-3">
           <div className="flex flex-row items-center justify-start pl-8 space-x-2">
-            <img src={briefcase} alt="icon" />
+            <img src={loanp} alt="icon" />
             <p>Loan Products</p>
           </div>
         </div>
