@@ -1,5 +1,9 @@
 import React from "react";
 
 const DashboardContent = () => {
-  return <></>;
+  return <>
+  
+  </>;
 };
+
+export default DashboardContent;

@@ -1,4 +1,7 @@
 import React from "react";
+import logo from "../assets/images/logo.png";
+import hero from "../assets/images/img.png";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -8,7 +11,7 @@ const Login = () => {
         <div className="flex flex-col justify-center space-y-36">
           {/* LOGO */}
           <div className="">
-            <img src={logo} alt="logo" className="w-36 h-8 ml-6" />
+            <img src={logo} alt="logo" className="w-[10rem] h-8 ml-6" />
           </div>
 
           {/* HERO IMAGE */}
@@ -26,19 +29,21 @@ const Login = () => {
           </div>
           <div className="space-y-4">
             <input
-              class="shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              type="text"
+              className="shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="email"
               placeholder="Email"
             />
             <input
-              class="shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="password"
               placeholder="Password"
             />
             <p className="uppercase font-bold">Forgot password?</p>
-            <button className="w-full p-3 text-white rounded text-center bg-teal-400">
-              LOG IN
-            </button>
+            <Link to="/dashboard">
+              <button className="w-full p-3 text-white rounded text-center bg-teal-400">
+                LOG IN
+              </button>
+            </Link>
           </div>
         </div>
       </div>

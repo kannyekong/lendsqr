@@ -7,16 +7,17 @@ import "./App.css";
 function App() {
   return (
     <Switch>
+      {/* PAth to login page */}
       <Route path="/" exact>
         <Login />
       </Route>
 
-      {/* GETTING STARTED ONE Routes */}
+      {/* Path to dashboard */}
       <Route path="/dashboard" exact>
         <Dashboard />
       </Route>
 
-      {/* GETTING STARTED TWO Routes */}
+      {/* path to user details */}
       <Route path="/user_details" exact>
         <DashboardDetails />
       </Route>
