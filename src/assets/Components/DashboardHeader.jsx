@@ -8,15 +8,15 @@ import d1 from "../../assets/images/d1.png";
 const DashboardHeader = () => {
   return (
     <>
-      <div className="flex flex-row items-center justify-between p-8 bg-[#fefefe]">
+      <div className="flex flex-row items-center justify-between p-8 bg-white">
         <div>
-          <img src={logo} alt="logo" className="w-36 h-8 ml-6" />
+          <img src={logo} alt="logo" className="w-40 h-8 ml-6" />
         </div>
         <div className="relative text-gray-700">
           <form>
             <input
-              className="w-[300px] md:w-[500px] pl-4 h-10 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline md:p-6"
-              type="email"
+              className="w-[300px] work-sans md:w-[500px] pl-4 h-10 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline md:p-6"
+              type="text"
               placeholder="Search for anything"
               required
             />
@@ -28,8 +28,10 @@ const DashboardHeader = () => {
             </button>
           </form>
         </div>
-        <div className="flex flex-row items-center justify-center space-x-4">
-          <p>Docs</p>
+        <div className="flex flex-row items-center justify-center space-x-8">
+          <p>
+            <u>Docs</u>
+          </p>
           <img src={bell} alt="bell" />
           <div className="flex flex-row items-center justify-center space-x-2">
             <img src={profile} alt="profile" className="rounded-full" />

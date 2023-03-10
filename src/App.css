@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sideBarHover {
+  @apply hover:border-l-4 hover:bg-green-50 hover:border-l-teal-500 hover:cursor-pointer transition duration-100;
+}
+
+.avenir {
+  font-family: "Avenir Next LT Pro", sans-serif;
+}
+
+.work-sans,
+th,
+td,
+select,
+p {
+  font-family: "Montserrat", sans-serif;
+}

@@ -1,9 +1,9 @@
 import React from "react";
-import DashboardContent from "../assets/Components/DashboardContents";
 import DashboardHeader from "../assets/Components/DashboardHeader";
 import SideBar from "../assets/Components/SideBar";
+import DashboardContentTwo from "../assets/Components/DashboardContentTwo";
 
-const Dashboard = () => {
+const UserDetails = () => {
   return (
     <div className="bg-[#f7fcfc]">
       <div>
@@ -11,11 +11,10 @@ const Dashboard = () => {
       </div>
       <div className="flex flex-row items-start justify-start">
         <SideBar />
-        <DashboardContent />
+        <DashboardContentTwo />
       </div>
     </div>
   );
-  
 };
 
-export default Dashboard;
+export default UserDetails;
