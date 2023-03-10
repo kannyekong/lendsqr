@@ -12,7 +12,7 @@ const DashboardHeader = () => {
         <div>
           <img src={logo} alt="logo" className="w-40 h-8 ml-6" />
         </div>
-        <div className="relative text-gray-700">
+        <div className="-left-48 relative text-gray-700">
           <form>
             <input
               className="w-[300px] work-sans md:w-[500px] pl-4 h-10 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline md:p-6"

@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import elipses from "../images/ellipses.png";
 import sort from "../images/sort.png";
 import prevButton from "../images/prev btn.png";
 import nextButton from "../images/next btn.png";
 import { useHistory } from "react-router-dom";
+import Filter from "./FilterDetails";
 
 const Table = () => {
+  const [show, setShow] = useState(false);
   const history = useHistory();
   const goToDetails = () =>
     history.push("/dashboard/users/user_details", { replace: true });
+
+  const displayFilter = () => setShow(!show);
+
+  // JSX
   return (
     <>
       <div className="relative overflow-y-auto shadow-md rounded">
@@ -17,7 +23,7 @@ const Table = () => {
             <tr>
               <th className="flex flex-row px-6 py-8 text-[14px] space-x-3 uppercase">
                 <span>Organization</span>
-                <button>
+                <button onClick={displayFilter}>
                   <img src={sort} alt="sort" />
                 </button>
               </th>
@@ -27,7 +33,7 @@ const Table = () => {
                 className="space-x-3 text-[14px] px-6 py-8 uppercase"
               >
                 <span>UserName</span>
-                <button>
+                <button onClick={displayFilter}>
                   <img src={sort} alt="sort" />
                 </button>
               </th>
@@ -36,13 +42,13 @@ const Table = () => {
                 className="space-x-3 text-[14px]  px-6 py-3 uppercase"
               >
                 <span>Email</span>
-                <button>
+                <button onClick={displayFilter}>
                   <img src={sort} alt="sort" className="" />
                 </button>
               </th>
               <th className="px-6 text-[14px] space-x-2 py-3 uppercase">
                 <span>Phone Number</span>
-                <button>
+                <button onClick={displayFilter}>
                   <img src={sort} alt="sort" />
                 </button>
               </th>
@@ -51,7 +57,7 @@ const Table = () => {
                 className="px-6 text-[14px] py-3 space-x-2 uppercase"
               >
                 <span>Date Joined</span>
-                <button>
+                <button onClick={displayFilter}>
                   <img src={sort} alt="sort" />
                 </button>
               </th>
@@ -60,7 +66,7 @@ const Table = () => {
                 className="px-6 text-[16px] space-x-2 py-3 uppercase"
               >
                 <span>Status</span>
-                <button>
+                <button onClick={displayFilter}>
                   <img src={sort} alt="sort" />
                 </button>
               </th>
@@ -159,6 +165,9 @@ const Table = () => {
           </div>
         </div>
       </div>
+
+      {/* Show and Hide Filter Component */}
+      {show && <Filter />}
     </>
   );
 };

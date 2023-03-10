@@ -1,5 +1,6 @@
 import React from "react";
 import DashboardContent from "../assets/Components/DashboardContents";
+import Filter from "../assets/Components/FilterDetails";
 import DashboardHeader from "../assets/Components/DashboardHeader";
 import SideBar from "../assets/Components/SideBar";
 
@@ -15,7 +16,6 @@ const Dashboard = () => {
       </div>
     </div>
   );
-  
 };
 
 export default Dashboard;

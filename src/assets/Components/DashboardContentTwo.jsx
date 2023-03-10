@@ -25,10 +25,10 @@ const DashboardContentTwo = () => {
         <div className="flex flex-row items-center justify-between">
           <p className="font-bold text-2xl">User Details</p>
           <div className="flex flex-row items-center justify-between space-x-4">
-            <button className="p-2 px-4  border-4 border-red-500 rounded-md text-red-500 transition duration-50 hover:-translate-y-2">
+            <button className="p-2 px-4 uppercase font-semibold work-sans border-4 border-red-500 rounded-md text-red-500 transition duration-50 hover:-translate-y-2">
               BlackList User
             </button>
-            <button className="p-2 px-4 border-4 border-teal-500 rounded-md text-teal-500 transition duration-50 hover:-translate-y-2 ">
+            <button className="p-2 px-4 font-semibold work-sans uppercase border-4 border-teal-500 rounded-md text-teal-500 transition duration-50 hover:-translate-y-2 ">
               Activate User
             </button>
           </div>
