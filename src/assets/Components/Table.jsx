@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import elipses from "../images/ellipses.png";
 import sort from "../images/sort.png";
+import add from "../images/add.png";
+import view from "../images/view.png";
+import deleteIcon from "../images/delete.png";
+
 import prevButton from "../images/prev btn.png";
 import nextButton from "../images/next btn.png";
 import { useHistory } from "react-router-dom";
@@ -17,7 +21,7 @@ const Table = () => {
   // JSX
   return (
     <>
-      <div className="relative overflow-y-auto shadow-md rounded">
+      <div className="relative shadow-md rounded">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-white">
             <tr>
@@ -76,10 +80,7 @@ const Table = () => {
             </tr>
           </thead>
           <tbody>
-            <tr
-              className="bg-white border-b  hover:bg-[#fefefe]"
-              onClick={goToDetails}
-            >
+            <tr className="relative bg-white border-b hover:bg-[#fefefe]">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium whitespace-nowrap "
@@ -92,44 +93,43 @@ const Table = () => {
               <td className="px-6 py-4">15th May, 2020 10:00 am</td>
               <td className="px-6 py-4">
                 <div className="flex items-center justify-center p-2 rounded-full bg-green-50">
-                  <p className="font-semibold">active</p>
+                  <p className="font-semibold text-green-500">Active</p>
                 </div>
               </td>
-              <td class="px-6 py-4 text-right">
-                <a
-                  href="#"
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  <img src={elipses}></img>
-                </a>
-              </td>
-            </tr>
-            <tr class="bg-white border-b  hover:bg-[#fefefe]">
-              <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">
-                LendSQR
-              </th>
-              <td class="px-6 py-4">Adedeji</td>
-              <td class="px-6 py-4">adedeji@gmail.com</td>
-              <td class="px-6 py-4">09029394845</td>
-              <td class="px-6 py-4">15th May, 2020 10:00 am</td>
               <td class="px-6 py-4">
-                <div className="flex items-center justify-center p-2 rounded-full bg-red-50">
-                  <p className="font-semibold">inactive</p>
-                </div>
-              </td>
-              <td class="px-6 py-4 text-right">
-                <a
-                  href="#"
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
+                <div className="flex items-center justify-center rounded-full p-1 py-3 hover:bg-[#F0FDF4]">
                   <img src={elipses}></img>
-                </a>
+                </div>
+                <div className="absolute flex flex-col items-center justify-start bg-white space-y-1 rounded-md -right-6 ">
+                  <div className="hover:bg-[#F0FDF4] p-2 px-4">
+                    <button
+                      onClick={goToDetails}
+                      className="flex flex-row items-center space-x-2 "
+                    >
+                      <img src={view} alt="view" />
+                      <p className="font-semibold">View Details</p>
+                    </button>
+                  </div>
+                  <div className="hover:bg-[#F0FDF4] p-2 px-4">
+                    <button className="flex flex-row items-center space-x-2">
+                      <img src={deleteIcon} alt="delete" />
+                      <p className="font-semibold">Blacklist User</p>
+                    </button>
+                  </div>
+                  <div className="hover:bg-[#F0FDF4] p-2 px-4">
+                    <button className="flex flex-row items-center space-x-2">
+                      <img src={add} alt="add" />
+                      <p className="font-semibold">Activate User</p>
+                    </button>
+                  </div>
+                </div>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div className="flex flex-row p-4 items-center justify-between space-x-2">
+
+      <div className="flex flex-row p-4 items-center justify-between">
         <div className="flex flex-row items-center space-x-2">
           <p>Showing</p>{" "}
           <select
