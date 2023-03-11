@@ -6,8 +6,13 @@
   @apply hover:border-l-4 hover:bg-green-50 hover:border-l-teal-500 hover:cursor-pointer transition duration-100;
 }
 
+.userDetailHover {
+  @apply hover:border-b-4 hover:border-teal-500 hover:cursor-pointer;
+}
+
 .avenir {
   font-family: "Avenir Next LT Pro", sans-serif;
+  font-weight: 400;
 }
 
 .work-sans,
@@ -16,4 +21,9 @@ td,
 select,
 p {
   font-family: "Montserrat", sans-serif;
+}
+
+td {
+  font-weight: 400;
+  color: #545f7d;
 }

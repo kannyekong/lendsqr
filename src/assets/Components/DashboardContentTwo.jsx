@@ -1,16 +1,81 @@
-import React from "react";
 import backArrow from "../images/backArrow.png";
 import avatar2 from "../images/avatar2.png";
 import ystar from "../images/ystar.png";
 import wstar from "../images/wstar.png";
 import { useHistory } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { BaseUrl } from "../store/BaseUrl";
 
 const DashboardContentTwo = () => {
+  const [data, setData] = useState({});
+  const [haserror, setHasError] = useState("");
   const history = useHistory();
   const backHandler = () => {
     history.goBack();
   };
 
+  useEffect(() => {
+    // Get user ID stored in local storage
+    const id = localStorage.getItem("userid");
+    console.log(id);
+
+    const getUser = async () => {
+      const requestOptions = {
+        method: "GET",
+      };
+      try {
+        const response = await fetch(
+          BaseUrl + `api/v1/users/${id}`,
+          requestOptions
+        );
+        const result = await response.json();
+        if (!response.ok) {
+          throw new error("A problem occured");
+        } else {
+          const newData = {
+            id: result.id,
+            orgName: result.orgName,
+            userName: result.userName,
+            email: result.email,
+            phone: result.phoneNumber,
+            firstname: result.profile.firstName,
+            lastname: result.profile.lastName,
+            phoneNumber: result.profile.phoneNumber,
+            avatar: result.profile.avatar,
+            gender: result.profile.gender,
+            bvn: result.profile.bvn,
+            address: result.profile.address,
+            currency: result.profile.currency,
+            gName: result.guarantor.firstName,
+            glName: result.guarantor.lastName,
+            gPhone: result.guarantor.phoneNumber,
+            gGender: result.guarantor.gender,
+            gAddress: result.guarantor.address,
+            accBal: result.accountBalance,
+            accNo: result.accountNumber,
+            facebook: result.socials.facebook,
+            instagram: result.socials.instagram,
+            twitter: result.socials.twitter,
+            educationLevel: result.education.level,
+            empStatus: result.education.employmentStatus,
+            sector: result.education.sector,
+            duration: result.education.duration,
+            officeMail: result.education.officeEmail,
+            monthlyIncomeOne: result.education.monthlyIncome[0],
+            monthlyIncomeTwo: result.education.monthlyIncome[1],
+            loanRepayment: result.education.loanRepayment,
+          };
+
+          setData(newData);
+        }
+      } catch (error) {
+        setHasError(error);
+      }
+    };
+    getUser();
+  }, []);
+
+  console.log(data);
   // JSX
   return (
     <div className="p-16 w-full">
@@ -39,10 +104,16 @@ const DashboardContentTwo = () => {
           <div className="flex flex-col items-center justify-center w-full rounded-lg bg-white  shadow-md">
             <div className="flex flex-row items-center space-x-4 p-8  w-full ">
               <div className="flex flex-row items-center justify-center space-x-4 h-[100px] border-r">
-                <img src={avatar2} alt="profile" className="w-1/4" />
+                <img
+                  src={data.avatar}
+                  alt="profile"
+                  className="w-1/4 rounded-full"
+                />
                 <div className="flex flex-col items-start space-y-2">
-                  <p className="text-2xl font-bold">Grace Effiom</p>
-                  <p>LSQF32412sW2</p>
+                  <p className="text-2xl font-bold">
+                    {data.firstname + " " + data.lastname}
+                  </p>
+                  <p>{data.accNo}</p>
                 </div>
               </div>
 
@@ -55,27 +126,29 @@ const DashboardContentTwo = () => {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center pr-4 space-y-2 h-[100px]">
-                <p className="text-xl font-semibold">N200,000.00</p>
-                <p>92131231231/Providus Bank</p>
+                <p className="text-xl font-semibold">
+                  {data.currency + " " + data.accBal}
+                </p>
+                <p>{data.bvn}/Providus Bank</p>
               </div>
             </div>
             <div className="flex flex-row items-center justify-between w-full px-24">
               <div className="border-b-4 border-teal-500 px-6">
                 <p>General Details</p>
               </div>
-              <div>
+              <div className="userDetailHover px-6">
                 <p>Documents</p>
               </div>
-              <div>
+              <div className="userDetailHover px-6">
                 <p>Bank Details</p>
               </div>
-              <div>
+              <div className="userDetailHover px-6">
                 <p>Loans</p>
               </div>
-              <div>
+              <div className="userDetailHover px-6">
                 <p>Savings</p>
               </div>
-              <div>
+              <div className="userDetailHover px-6">
                 <p>App and System</p>
               </div>
             </div>
@@ -91,35 +164,45 @@ const DashboardContentTwo = () => {
               <div className="grid grid-cols-1  md:w-full md:space-y-0 md:gap-y-12  gap-x-even md:gap-x-12 md:grid-cols-5">
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Full Name</p>
-                  <p className="font-semibold">Grace Effiom</p>
+                  <p className="font-semibold">
+                    {data.firstname + " " + data.lastname}
+                  </p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Phone</p>
-                  <p className="font-semibold">08133234234</p>
+                  <p className="font-semibold">{data.phone}</p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Email</p>
-                  <p className="font-semibold">grace@gmail.com</p>
+                  <p className="font-semibold">{data.email}</p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">BVN</p>
-                  <p className="font-semibold">90382138123</p>
+                  <p className="font-semibold">{data.bvn}</p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Gender</p>
-                  <p className="font-semibold">Female</p>
+                  <p className="font-semibold">{data.gender}</p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Marital Status</p>
-                  <p className="font-semibold">Single</p>
+                  <p className="font-semibold">
+                    {data.maritalStatus === undefined
+                      ? "N/A"
+                      : data.maritalStatus}
+                  </p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Children</p>
-                  <p className="font-semibold">3</p>
+                  <p className="font-semibold">
+                    {data.children === undefined ? "N/A" : data.maritalStatus}
+                  </p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Type of residence</p>
-                  <p className="font-semibold">Personal Apartment</p>
+                  <p className="font-semibold">
+                    {data.residence === undefined ? "N/A" : data.residence}
+                  </p>
                 </div>
               </div>
             </div>
@@ -129,31 +212,36 @@ const DashboardContentTwo = () => {
               <div className="grid grid-cols-1  md:w-full md:space-y-0 md:gap-y-12 gap-x-even md:gap-x-12 md:grid-cols-5">
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Level of Education</p>
-                  <p className="font-semibold">Bsc</p>
+                  <p className="font-semibold">{data.educationLevel}</p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Employment Status</p>
-                  <p className="font-semibold">08133234234</p>
+                  <p className="font-semibold">{data.empStatus}</p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Sector of employment</p>
-                  <p className="font-semibold">Fintech</p>
+                  <p className="font-semibold">{data.sector}</p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Duration of Employment</p>
-                  <p className="font-semibold">2 Years</p>
+                  <p className="font-semibold">{data.duration}</p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Office Email</p>
-                  <p className="font-semibold">grace@gmail.com</p>
+                  <p className="font-semibold">{data.officeMail}</p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Monthly income</p>
-                  <p className="font-semibold">N200,000 - 400,000</p>
+                  <p className="font-semibold">
+                    {" "}
+                    {data.income === undefined ? "N/A" : data.income}
+                  </p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Loan repayment</p>
-                  <p className="font-semibold">40,000</p>
+                  <p className="font-semibold">
+                    {data.currency + "  " + data.loanRepayment}
+                  </p>
                 </div>
               </div>
             </div>
@@ -162,15 +250,15 @@ const DashboardContentTwo = () => {
               <div className="grid grid-cols-1 md:w-full md:space-y-0 md:gap-y-12 gap-x-even md:gap-x-12 md:grid-cols-5">
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Twitter</p>
-                  <p className="font-semibold">Bsc</p>
+                  <p className="font-semibold">{data.twitter}</p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">FaceBook</p>
-                  <p className="font-semibold">08133234234</p>
+                  <p className="font-semibold">{data.facebook}</p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Instagram</p>
-                  <p className="font-semibold">Fintech</p>
+                  <p className="font-semibold">{data.instagram}</p>
                 </div>
               </div>
             </div>
@@ -180,19 +268,26 @@ const DashboardContentTwo = () => {
               <div className="grid grid-cols-1 md:w-full md:space-y-0 md:gap-y-12  gap-x-even md:gap-x-12 md:grid-cols-5">
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Fullname</p>
-                  <p className="font-semibold">Olamide adedeji</p>
+                  <p className="font-semibold">
+                    {data.gName + "  " + data.glName}
+                  </p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Phone</p>
-                  <p className="font-semibold">08133234234</p>
+                  <p className="font-semibold">{data.gPhone}</p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
-                  <p className="uppercase">Email Address</p>
-                  <p className="font-semibold">olamide@gmail.com</p>
+                  <p className="uppercase">Address</p>
+                  <p className="font-semibold">{data.address}</p>
                 </div>
                 <div className="flex flex-col items-start justify-start space-y-1">
                   <p className="uppercase">Relationship</p>
-                  <p className="font-semibold">Brother</p>
+                  <p className="font-semibold">
+                    {" "}
+                    {data.relationship === undefined
+                      ? "N/A"
+                      : data.relationship}
+                  </p>
                 </div>
               </div>
             </div>
