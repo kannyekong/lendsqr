@@ -5,10 +5,10 @@
 
 # Project description: 
 
-A responsive project with 4 pages namely; Login, Dashboard, User page, User details page, Not found 
-The user page gets data from a mock api with 500 records 
+A responsive project with 4 pages namely; Login, Dashboard, User page, User details page, Not found. 
+The user page gets data from a mock api with 500 records. 
 I used local storage to store and retrieve userid from user’s page and queried the local storage to get the stored userid on the user details page. 
-I used the id from local storage to query the API to get the user details respectively 
+I used the id from local storage to query the API to get the user details respectively. 
 
  
 
@@ -55,6 +55,8 @@ All users will load into the table automatically
 Click on the three ellipse button on table to reveal flyout menu to take you to the user details page 
 Click on available page numbers you see to access the table pagination 
 
+# Live Preview
+Hosted on vercel: 
  
 
 # IMPROVEMENTS (To Fix) 
