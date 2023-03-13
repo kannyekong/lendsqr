@@ -56,8 +56,7 @@ Click on the three ellipse button on table to reveal flyout menu to take you to 
 Click on available page numbers you see to access the table pagination. 
 
 # LIVE PREVIEW
-Hosted on vercel: https://vercel.com/kannyekong/ekong-akaneno-lendsqr-fe-test/
- 
+Hosted on vercel: https://ekong-akaneno-lendsqr-fe-test.vercel.app/ 
 
 # IMPROVEMENTS (To Fix) 
 
