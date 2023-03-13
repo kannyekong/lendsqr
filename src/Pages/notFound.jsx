@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/images/logo.png";
-import notFound from "../assets/images/notFound.gif";
+import notFound from "../assets/images/notfound.gif";
 import { useHistory } from "react-router-dom";
 
 const NotFound = () => {
