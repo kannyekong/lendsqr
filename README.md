@@ -42,7 +42,7 @@ Functions and constants are stored at lendsqr/src/assets/store directory
 
  
 
-**HOW TO INSTALL AND RUN THE PROJECT** 
+# HOW TO INSTALL AND RUN THE PROJECT
 
 Clone Repo 
 Npm i to install all dependencies 
