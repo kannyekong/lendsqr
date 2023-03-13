@@ -1,9 +1,9 @@
 # lendsqr
-# Project Title:  LendSqr Frontend Engineer Test 
+# PROJECT TITLE:  LendSqr Frontend Engineer Test 
 
  
 
-# Project description: 
+# PROJECT DESCRIPTION: 
 
 A responsive project with 4 pages namely; Login, Dashboard, User page, User details page, Not found. 
 The user page gets data from a mock api with 500 records. 
@@ -55,7 +55,7 @@ All users will load into the table automatically
 Click on the three ellipse button on table to reveal flyout menu to take you to the user details page 
 Click on available page numbers you see to access the table pagination 
 
-# Live Preview
+# LIVE PREVIEW
 Hosted on vercel: 
  
 
