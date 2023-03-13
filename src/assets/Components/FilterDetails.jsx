@@ -12,21 +12,23 @@ const Filter = () => {
         <div className="flex flex-col space-y-1">
           <p>Organization</p>
           <select class="bg-gray-50 border w-full border-gray-300 text-gray-900 text-sm rounded-lg block h-[40px] ">
-            <option value="DE">200</option>
+            <option value="DE">Select</option>
           </select>
         </div>
         <div className="flex flex-col space-y-1">
           <p>Username</p>
           <input
+            placeholder="User"
             type="text"
-            className="shadow avenir appearance-none border rounded w-full h-[40px] px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full h-[40px] px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
         <div className="flex flex-col space-y-1">
           <p>Email</p>
           <input
+            placeholder="Email"
             type="email"
-            className="shadow avenir appearance-none border rounded w-full h-[40px] px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full h-[40px] px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
         <div className="flex flex-col space-y-1">
@@ -44,14 +46,15 @@ const Filter = () => {
         <div className="flex flex-col space-y-1">
           <p>Phone Number</p>
           <input
+            placeholder="Phone Number"
             type="text"
-            className="shadow avenir appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
         <div className="flex flex-col space-y-1">
           <p>Status</p>
           <select class="bg-gray-50 border w-full border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 ">
-            <option value="DE">200</option>
+            <option value="DE">Select</option>
           </select>
         </div>
         <div className="flex flex-row space-x-2 w-full">

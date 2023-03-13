@@ -2,6 +2,7 @@ import { Switch, Route } from "react-router-dom";
 import Login from "./Pages/login";
 import Dashboard from "./Pages/dashboard";
 import UserDetails from "./Pages/user_details";
+import NotFound from "./Pages/notFound";
 import "./App.css";
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
       {/* path to user details */}
       <Route path="/dashboard/users/user_details" exact>
         <UserDetails />
+      </Route>
+      <Route path="*">
+        <NotFound />
       </Route>
     </Switch>
   );

@@ -1,14 +1,13 @@
-import backArrow from "../images/backArrow.png";
-import avatar2 from "../images/avatar2.png";
-import ystar from "../images/ystar.png";
-import wstar from "../images/wstar.png";
 import { useHistory } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { BaseUrl } from "../store/BaseUrl";
+import backArrow from "../images/backArrow.png";
+import ystar from "../images/ystar.png";
+import wstar from "../images/wstar.png";
 
 const DashboardContentTwo = () => {
   const [data, setData] = useState({});
-  const [haserror, setHasError] = useState("");
+  const [hasError, setHasError] = useState("");
   const history = useHistory();
   const backHandler = () => {
     history.goBack();
@@ -17,7 +16,6 @@ const DashboardContentTwo = () => {
   useEffect(() => {
     // Get user ID stored in local storage
     const id = localStorage.getItem("userid");
-    console.log(id);
 
     const getUser = async () => {
       const requestOptions = {
@@ -75,7 +73,6 @@ const DashboardContentTwo = () => {
     getUser();
   }, []);
 
-  console.log(data);
   // JSX
   return (
     <div className="p-16 w-full">
@@ -89,6 +86,20 @@ const DashboardContentTwo = () => {
         </button>
         <div className="flex flex-row items-center justify-between">
           <p className="font-bold text-2xl">User Details</p>
+
+          {/* Error todisplay if there is an HTTP error when fetching data */}
+          {hasError && (
+            <div className="flex flex-ro{w item-center justify-center p-2 bg-red-400 w-full md:w-1/2 md:mx-auto rounded-md text-white mb-4">
+              <p>
+                An error of <b>"{`${hasError}`}"</b> occured. Try again.
+              </p>
+            </div>
+          )}
+          {data.length === 0 && (
+            <div className="flex flex-row item-center justify-center text-center p-2 bg-teal-400 w-full md:w-1/2 md:mx-auto rounded-md text-white mb-4">
+              <p>Loading user profile. Please wait...</p>
+            </div>
+          )}
           <div className="flex flex-row items-center justify-between space-x-4">
             <button className="p-2 px-4 uppercase font-semibold work-sans border-4 border-red-500 rounded-md text-red-500 transition duration-50 hover:-translate-y-2">
               BlackList User
@@ -156,8 +167,8 @@ const DashboardContentTwo = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="flex flex-row items-center min-w-screen">
-          <div className="flex flex-col items-start justify-center w-full bg-white shadow-md rounded-lg px-8">
+        <div className="flex items-center min-w-screen">
+          <div className="flex flex-col justify-center w-full bg-white shadow-md rounded-lg px-8">
             {/*  */}
             <div className="w-full p-4 border-b space-y-3">
               <p className="pt-4 font-bold">Personal Information</p>

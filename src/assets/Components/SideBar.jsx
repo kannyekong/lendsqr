@@ -22,15 +22,13 @@ import smessages from "../../assets/images/smessages.png";
 import auditlog from "../../assets/images/alog.png";
 import logout from "../../assets/images/logout.png";
 
-import { NavLink, Router } from "react-router-dom";
-
 const SideBar = () => {
   return (
     <>
-      <div className="hidden lg:flex flex-col w-[300px] bg-white">
+      <div className=" md:flex flex-col w-[100px] md:w-[300px] bg-white">
         {/*  */}
         <div className="py-3">
-          <div className="flex flex-row items-center justify-start pl-8 space-x-2">
+          <div className="flex flex-col md:flex-row text-xs md:text-[16px] space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={briefcase} alt="icon" />
             <p>Switch Organization</p>
             <img src={arrowDown} alt="icon" />
@@ -38,165 +36,165 @@ const SideBar = () => {
         </div>
 
         <div className="py-8 ">
-          <div className="flex flex-row p-2 items-center justify-start pl-8 sideBarHover space-x-2">
+          <div className="flex flex-col py-2 md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={home} alt="icon" />
             <p>Dashboard</p>
           </div>
         </div>
-        <div className="flex items-center justify-start ml-8 py-3">
+        <div className="flex items-center justify-center md:justify-start text-[12px] md:ml-8 pt-6 pb-3">
           <p className="font-bold text-[12px]">CUSTOMERS</p>
         </div>
 
         {/* ONLY ACTIVE CLASS WITH CSS DESIGN */}
         <div className="">
-          <div className="flex flex-row items-center border-l-4 p-2 bg-green-50 border-l-teal-500 justify-start pl-8 space-x-2">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={users} alt="icon" />
             <p className="text-[16px]">Users</p>
           </div>
         </div>
 
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={guarantors} alt="icon" />
             <p>Guarantors</p>
           </div>
         </div>
 
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={sack} alt="icon" />
             <p>Loans</p>
           </div>
         </div>
 
         <div className="py-3">
-          <div className="flex flex-row items-center  p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={hand} alt="icon" />
             <p>Decision Models</p>
           </div>
         </div>
 
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={piggy} alt="icon" />
             <p>Savings</p>
           </div>
         </div>
 
         <div className="py-3">
-          <div className="flex p-2 flex-row items-center justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={loanp} alt="icon" />
             <p>Loan Requests</p>
           </div>
         </div>
 
         <div className="py-3">
-          <div className="flex p-2 flex-row items-center justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={whitelist} alt="icon" />
             <p>Whitelist</p>
           </div>
         </div>
 
         <div className="py-3">
-          <div className="flex p-2 flex-row items-center justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={usertimes} alt="icon" />
             <p>Karma</p>
           </div>
         </div>
 
-        <div className="flex items-center justify-start ml-8 pt-6 pb-3">
+        <div className="flex items-center justify-center md:justify-start text-[12px] md:ml-8 pt-6 pb-3">
           <p className="font-bold text-[12px]">BUSINESSES</p>
         </div>
 
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={briefcase} alt="icon" />
             <p>Organization</p>
           </div>
         </div>
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={loanp} alt="icon" />
             <p>Loan Products</p>
           </div>
         </div>
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={bank} alt="icon" />
             <p>Saving Products</p>
           </div>
         </div>
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={coins} alt="icon" />
             <p>Fees and Charges</p>
           </div>
         </div>
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={coins} alt="icon" />
             <p>Transactions</p>
           </div>
         </div>
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={services} alt="icon" />
             <p>Services</p>
           </div>
         </div>
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={serviceaccount} alt="icon" />
             <p>Service Account</p>
           </div>
         </div>
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={settlement} alt="icon" />
             <p>Settlements</p>
           </div>
         </div>
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col   md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={report} alt="icon" />
             <p>Reports</p>
           </div>
         </div>
 
-        <div className="flex items-center justify-start text-[12px] ml-8 pt-6 pb-3">
+        <div className="flex items-center justify-center md:justify-start text-[12px] md:ml-8 pt-6 pb-3">
           <p className="font-bold">SETTINGS</p>
         </div>
 
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={preference} alt="icon" />
             <p>Preferences</p>
           </div>
         </div>
 
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={feesnprices} alt="icon" />
             <p>Fees and Pricing</p>
           </div>
         </div>
 
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2 md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={auditlog} alt="icon" />
             <p>Audit Logs</p>
           </div>
         </div>
 
         <div className="py-3">
-          <div className="flex flex-row items-center p-2 justify-start pl-8 space-x-2 sideBarHover">
+          <div className="flex flex-col py-2 md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={smessages} alt="icon" />
             <p>System Messages</p>
           </div>
         </div>
 
-        <div className="py-3">
-          <div className="flex flex-row items-center justify-start pl-8 space-x-2 hover:cursor-pointer">
+        <div className="py-3 border-t mt-12">
+          <div className="flex flex-col py-2 md:flex-row text-xs  md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={logout} alt="icon" />
             <p>Logout</p>
           </div>

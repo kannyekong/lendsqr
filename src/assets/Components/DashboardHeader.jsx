@@ -15,7 +15,7 @@ const DashboardHeader = () => {
         <div className="2xl:-left-48 relative text-gray-700">
           <form>
             <input
-              className="w-[300px] work-sans md:w-[500px] pl-4 h-10 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline md:p-6"
+              className="hidden md:flex work-sans md:w-[500px] pl-4 h-10 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline md:p-6"
               type="text"
               placeholder="Search for anything"
               required
@@ -29,10 +29,10 @@ const DashboardHeader = () => {
           </form>
         </div>
         <div className="flex flex-row items-center justify-center space-x-8">
-          <p>
+          <p className="hidden md:flex">
             <u>Docs</u>
           </p>
-          <img src={bell} alt="bell" />
+          <img src={bell} alt="bell" className="hidden md:flex" />
           <div className="flex flex-row items-center justify-center space-x-2">
             <img src={profile} alt="profile" className="rounded-full" />
             <p>Akaneno Ekong</p>

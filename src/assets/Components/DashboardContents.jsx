@@ -12,18 +12,18 @@ const DashboardContent = () => {
       <div className="space-y-8 min-w-full">
         <p className="text-[24px] ml-2 font-bold">Users</p>
         <div className="flex flex-col items-center justify-center">
-          <div className="flex flex-row w-full space-x-12">
-            <CardItem src={one} description="USERS" figures="2,453" />
-            <CardItem src={two} description="ACTIVE USERS" figures="2,453" />
+          <div className="flex flex-col md:flex-row w-full space-y-4 md:space-y-0 md:space-x-12">
+            <CardItem src={one} description="USERS" figures="100" />
+            <CardItem src={two} description="ACTIVE USERS" figures="100" />
             <CardItem
               src={three}
               description="USERS WITH LOANS"
-              figures="12,453"
+              figures="100"
             />
             <CardItem
               src={four}
               description="USERS WITH SAVINGS"
-              figures="102,453"
+              figures="100"
             />
           </div>
         </div>
