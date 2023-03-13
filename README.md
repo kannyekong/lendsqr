@@ -14,10 +14,10 @@ I used the id from local storage to query the API to get the user details respec
 
 # RESOURCE LOCATIONS 
 
-Pages are stored in the lendsqr/src/pages directory 
-Components are stored in lendsqr/src/assets directory 
-Images are stored in lendsqr/src/assets/images directory 
-Functions and constants are stored at lendsqr/src/assets/store directory 
+Pages are stored in the lendsqr/src/pages directory. 
+Components are stored in lendsqr/src/assets directory. 
+Images are stored in lendsqr/src/assets/images directory. 
+Functions and constants are stored at lendsqr/src/assets/store directory. 
 
 # DEPENDENCIES 
 
@@ -44,24 +44,23 @@ Functions and constants are stored at lendsqr/src/assets/store directory
 
 # HOW TO INSTALL AND RUN THE PROJECT
 
-Clone Repo 
-Npm i to install all dependencies 
-Npm run dev to start at local server 
+Clone Repo.
+Npm i to install all dependencies. 
+Npm run dev to start at local server. 
 
 # HOW TO USE PROJECT 
 
-From the login page, clicking on the login button takes you to the dashboard 
-All users will load into the table automatically 
-Click on the three ellipse button on table to reveal flyout menu to take you to the user details page 
-Click on available page numbers you see to access the table pagination 
+From the login page, clicking on the login button takes you to the dashboard. 
+All users will load into the table automatically. 
+Click on the three ellipse button on table to reveal flyout menu to take you to the user details page. 
+Click on available page numbers you see to access the table pagination. 
 
 # LIVE PREVIEW
-Hosted on vercel: 
- 
+Hosted on vercel: https://ekong-akaneno-lendsqr-fe-test.vercel.app/ 
 
 # IMPROVEMENTS (To Fix) 
 
-Integrate TypeScript 
+Integrate TypeScript. 
 Previous and Next buttons on table not working.  
-Clean JSX of tailwind utility classes by writing them into layer, base, components directives on the app.css file
-Write tests for modules 
+Clean JSX of tailwind utility classes by writing them into layer, base, components directives on the app.css file.
+Write tests for modules. 
