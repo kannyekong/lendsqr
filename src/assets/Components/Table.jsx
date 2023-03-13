@@ -203,28 +203,28 @@ const Table = () => {
                     transition
                   >
                     <div
-                      className={`absolute flex p-2 w-[150px] space-y-4 flex-col  items-start justify-start bg-white space-y-1 rounded-md right-3`}
+                      className={`absolute z-1 flex p-2 w-[150px]  flex-col  items-start justify-start bg-white space-y-4 rounded-md -right-12 top-8`}
                     >
                       <MenuItem
                         onClick={() => goToDetails()}
                         className="flex flex-row items-center space-x-2 hover:cursor-pointer "
                       >
                         <img src={view} alt="view" />
-                        <p className="font-semibold">View Details</p>
+                        <p className="font-normal">View Details</p>
                       </MenuItem>
                       <MenuItem
                         onClick={() => goToDetails()}
                         className="flex flex-row items-center space-x-2 hover:cursor-pointer"
                       >
                         <img src={deleteIcon} alt="delete" />
-                        <p className="font-semibold">Blacklist User</p>
+                        <p className="font-normal">Blacklist User</p>
                       </MenuItem>
                       <MenuItem
                         onClick={() => goToDetails()}
                         className="flex flex-row items-center space-x-2 hover:cursor-pointer"
                       >
                         <img src={add} alt="add" />
-                        <p className="font-semibold">Activate User</p>
+                        <p className="font-normal">Activate User</p>
                       </MenuItem>
                     </div>
                   </Menu>

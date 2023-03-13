@@ -75,7 +75,7 @@ const DashboardContentTwo = () => {
 
   // JSX
   return (
-    <div className="p-16 w-full">
+    <div className="p-8 md:p-16 w-full">
       <div className="space-y-8 min-w-full">
         <button
           onClick={backHandler}
@@ -85,7 +85,7 @@ const DashboardContentTwo = () => {
           <p>Back to Users</p>
         </button>
         <div className="flex flex-row items-center justify-between">
-          <p className="font-bold text-2xl">User Details</p>
+          <p className="font-bold md:text-2xl">User Details</p>
 
           {/* Error todisplay if there is an HTTP error when fetching data */}
           {hasError && (
@@ -101,10 +101,10 @@ const DashboardContentTwo = () => {
             </div>
           )}
           <div className="flex flex-row items-center justify-between space-x-4">
-            <button className="p-2 px-4 uppercase font-semibold work-sans border-4 border-red-500 rounded-md text-red-500 transition duration-50 hover:-translate-y-2">
+            <button className="p-2 md:px-4 uppercase font-semibold work-sans border md:border-4 border-red-500 rounded-md text-red-500 transition duration-50 hover:-translate-y-2">
               BlackList User
             </button>
-            <button className="p-2 px-4 font-semibold work-sans uppercase border-4 border-teal-500 rounded-md text-teal-500 transition duration-50 hover:-translate-y-2 ">
+            <button className="p-2 md:px-4 font-semibold work-sans border uppercase md:border-4 border-teal-500 rounded-md text-teal-500 transition duration-50 hover:-translate-y-2 ">
               Activate User
             </button>
           </div>
@@ -113,8 +113,8 @@ const DashboardContentTwo = () => {
         {/* Card 1  */}
         <div className="flex flex-row items-center min-w-screen">
           <div className="flex flex-col items-center justify-center w-full rounded-lg bg-white  shadow-md">
-            <div className="flex flex-row items-center space-x-4 p-8  w-full ">
-              <div className="flex flex-row items-center justify-center space-x-4 h-[100px] border-r">
+            <div className="flex flex-col md:flex-row items-center space-x-4 p-8  w-full ">
+              <div className="flex flex-row items-center justify-center space-x-4 h-[100px] md:border-r">
                 <img
                   src={data.avatar}
                   alt="profile"
@@ -128,7 +128,7 @@ const DashboardContentTwo = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col items-center justify-center pr-4 space-y-2 h-[100px] border-r">
+              <div className="flex flex-col items-center justify-center pr-4 space-y-2 h-[100px] md:border-r">
                 <p className="text-xl font-semibold">User's Tier</p>
                 <div className="flex flex-row items-center justify-center space-x-2">
                   <img src={ystar} alt="yellow star" />
@@ -143,7 +143,7 @@ const DashboardContentTwo = () => {
                 <p>{data.bvn}/Providus Bank</p>
               </div>
             </div>
-            <div className="flex flex-row items-center justify-between w-full px-24">
+            <div className="hidden md:flex flex-row items-center justify-between w-full px-24">
               <div className="border-b-4 border-teal-500 px-6">
                 <p>General Details</p>
               </div>
