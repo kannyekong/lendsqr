@@ -6,6 +6,10 @@
   @apply hover:border-l-4 hover:bg-green-50 hover:border-l-teal-500 hover:cursor-pointer transition duration-100;
 }
 
+.linkActive {
+  @apply border-l-4 bg-green-50 border-l-teal-500 cursor-pointer;
+}
+
 .userDetailHover {
   @apply hover:border-b-4 hover:border-teal-500 hover:cursor-pointer;
 }
@@ -33,5 +37,3 @@ td {
   font-weight: 400;
   color: #545f7d;
 }
-
-

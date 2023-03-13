@@ -47,7 +47,7 @@ const SideBar = () => {
 
         {/* ONLY ACTIVE CLASS WITH CSS DESIGN */}
         <div className="">
-          <div className="flex flex-col py-2  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
+          <div className="flex flex-col py-2 linkActive  md:flex-row text-xs sideBarHover md:text-lg space-y-2 md:space-y-0 text-center md:text-none items-center md:justify-start md:pl-8 md:space-x-2">
             <img src={users} alt="icon" />
             <p className="text-[16px]">Users</p>
           </div>
